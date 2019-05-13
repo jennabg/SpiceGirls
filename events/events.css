@@ -1,0 +1,217 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. Default Overrides
+ * 2. Use Anywhere Classes
+ * 3. Header Styling
+ * 4. Calendar Styling
+ * 5. Booking Form Styling
+ * 6. Footer Styling
+************************************************/
+
+/* 1. Default Overrides */
+
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'Lato', Sans-Serif;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+/* 2. Use Anywhere Classes */
+
+.hidden{
+	position: absolute;
+	left: -10000px;
+}
+
+.page-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.flex-area {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+/* 3. Header Styling */
+
+#header{
+  background-color:#EAE7DA;
+}
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+
+/* 4. Calendar Styling */
+
+#main{
+	margin:10px;
+}
+
+#page-heading {
+	margin-top: 0;
+	padding-top: 1em;
+	font-family: 'Arvo', Serif;
+}
+
+#table-container {
+	flex: 2 0 0;
+	margin-right: 0.5em;
+}
+
+#calendar {
+	border: solid 1px black;
+	table-layout: fixed;
+	word-wrap: break-word;
+	width: 100%;
+	border-spacing: 0;
+	margin-bottom: 1em;
+}
+
+#calendar th {
+	border: solid 1px black;
+	padding: 0.5em;
+}
+
+td {
+	border: solid 1px black;
+	padding: 0.5em 0.5em 3em 2em;
+	text-align: right;
+}
+
+/* 5. Booking Form Styling */
+
+#booking-form {
+	flex: 1 0 0;
+	margin: 0 0 1em 0.5em;
+}
+
+.form-row {
+	margin-bottom: 1em;
+}
+
+.form-row:last-of-type label {
+	vertical-align: top;
+}
+
+.error-message {
+	color: red;
+}
+
+#event-desc {
+	resize: none;
+	width: 100%;
+	height: 8em;
+}
+
+/* 6. Footer Styling */
+
+#footer{
+	background-color:#8CA73C;
+	font-size: 20px;
+}
+.footermenu{
+	display: inline-block;
+	list-style-type: none;
+}
+.footermenu li a{
+	text-decoration: none;
+	color:white;
+	font-size:0.75em;
+}
+
+.footermenu li a:hover{
+	color: #F3DE2A;
+	text-decoration: underline;
+}

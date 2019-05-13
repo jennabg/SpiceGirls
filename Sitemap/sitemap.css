@@ -1,0 +1,220 @@
+
+/* 1. LAYOUT STYLES
+   2. HEADER
+   3.SITEMAP
+   4.FOOTER
+
+*/
+
+
+/* 1. LAYOUT STYLES*/
+html{
+  box-sizing: border-box;
+  font-size:20px;
+  font-family: 'Lato', Sans-Serif;
+
+}
+
+body {
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+p, h3 {
+    white-space:pre-line;
+}
+img{
+  padding:0;
+  margin:0;
+}
+
+
+.wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0;
+}
+
+.flex-container {
+  flex-flow:row wrap;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+
+.hidden{
+  position:absolute;
+  left:-10000px;
+}
+
+/* 2.HEADER */
+
+#header{
+  background-color:#EAE7DA;
+}
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+
+
+h1{
+  text-align: center;
+  font-family: Arvo, serif;
+  font-weight: bold;
+  color:white;
+  padding:0.5em;
+  font-size:4em;
+  margin:0;
+  text-shadow: 1.5px 1.5px 1px black;
+}
+#background-header{
+
+  background-image: url("images/spices.jpg");
+  opacity: 0.7;
+}
+
+/* 3. SITEMAP LIST */
+
+p{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  padding:1em;
+  background-color:#F26222;
+  color:white;
+  text-transform: uppercase;
+  width:75%;
+  margin:1em auto;
+}
+
+img {
+  width:75%;
+  height:auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2:hover{
+  background-color:#FBB02B;
+  color:#F26222;
+
+}
+
+.toggle{
+  border: 1px solid white;
+}
+.toggle:hover{
+
+}
+
+/* 4.FOOTER */
+
+#footer{
+  background-color:#8CA73C;
+}
+.footermenu{
+  display: inline-block;
+  list-style-type: none;
+}
+.footermenu li a{
+  text-decoration: none;
+  color:white;
+  font-size:0.75em;
+}
+
+.footermenu li a:hover{
+  color: #F3DE2A;
+  text-decoration: underline;
+
+}

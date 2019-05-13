@@ -1,0 +1,298 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. GENERAL CLASSES
+ * 3. HEADER
+ * 4. MAP AND BRIEF STORE INFORMATION BOX
+ * 5. LOCATIONS
+ * 6. FOOTER
+ ***********************************************/
+
+/*1. DEFAULT OVERRIDES*/
+html{
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: 'Lato', Sans-Serif;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body, html{
+  height: 100%;
+  margin: 0;
+}
+
+img{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+h3{
+  margin: 0;
+  line-height: 0.75em;
+}
+
+main{
+  padding: 0px 100px;
+}
+
+/*2. GENERAL CLASSES*/
+.hidden{
+  position: absolute;
+  left: -10000px;
+}
+
+.flex-container{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.page_wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*3. HEADER*/
+#header{
+  background-color:#EAE7DA;
+}
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+.shadow{
+  box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
+}
+
+/*4. MAP AND BRIEF STORE INFORMATION BOX*/
+#map{
+  width: 70%;
+  background-color: grey;
+}
+
+#map, #store_info{
+  height: 330px;
+}
+
+#map_and_info{
+  margin-bottom: 50px;
+}
+
+#store_info{
+  width: 30%;
+  text-align: center;
+}
+
+#store_info h3{
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+    Font-Family: 'Arvo', Serif;
+}
+
+#location_page_header, .location_heading{
+  text-transform: uppercase;
+  font-size: 25px;
+    Font-Family: 'Arvo', Serif;
+}
+
+#location_page_header{
+  padding-top: 50px;
+}
+
+.restaurant_name{
+  display: block;
+}
+
+.store_brief{
+  padding: 12px;
+  transition: all 0.5s;
+}
+
+.information_icon{
+  margin: 3.5px;
+  max-width: 20px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address{
+  margin-bottom: 0;
+}
+
+.phone_number{
+  display: block;
+}
+
+.phone_number p, img{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.phone_number img{
+  max-width: 15px;
+  margin-right: 5px;
+}
+
+.active{
+  background-color: #e5e5e5;
+}
+
+/*5. LOCATIONS*/
+.location_heading{
+  color: green;
+}
+
+.location{
+  padding: 50px;
+  margin-bottom: 50px;
+}
+
+.location_text{
+  width: 55%;
+}
+
+.restaurant_image{
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.store_hours_container{
+  margin-top: 50px;
+  margin-right: 200px;
+}
+
+.directions{
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.5s;
+  color: green;
+}
+
+.directions:hover{
+  color: black;
+}
+
+.store_hours_container h4, .directions{
+  text-transform: uppercase;
+}
+
+.store_hours_container h4{
+  border-bottom: 1px solid #808080;
+}
+
+.highlight_hours{
+  font-weight: bold;
+  color: green;
+}
+
+/*6. FOOTER*/
+#footer{
+  background-color: #8CA73C;
+  font-size: 20px;
+}
+
+.footermenu{
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footermenu li a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.75em;
+}
+
+.footermenu li a:hover{
+  color: #F3DE2A;
+  text-decoration: underline;
+}

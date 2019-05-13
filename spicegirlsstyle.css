@@ -1,0 +1,454 @@
+/* 1. LAYOUT STYLES
+   2. HEADER
+   3.DIVIDERS
+   4.MAIN
+   5.LOCATION
+   6.MENU
+   7.SPECIALS
+   8.FOOTER
+
+*/
+
+/* 1. LAYOUT STYLES*/
+html{
+  box-sizing: border-box;
+  font-size:20px;
+  font-family: 'Lato', Sans-Serif;
+
+}
+
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+p, h3 {
+    white-space:pre-line;
+}
+img{
+  padding:0;
+  margin:0;
+}
+
+body{
+  margin: 0;
+}
+
+.wrapper {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0;
+}
+
+.flex-container {
+  flex-flow:row wrap;
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  margin:0;
+  padding:0;
+}
+
+
+.hidden{
+  position:absolute;
+  left:-10000px;
+}
+
+
+
+/* 2. HEADER */
+
+
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+.display{
+  display:none;
+}
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+#banner::before {
+  background-image: url("images/main-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+content: "";
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height:350px;
+z-index: -2;
+opacity: 0.8;
+}
+#banner{
+  border-top:25px solid #FBB02B;
+  /* position:relative; */
+  color:white;
+  align-items: center;
+  overflow:hidden;
+  height:350px;
+  text-align: center;
+
+}
+
+#logo-banner{
+  position:relative;
+  width:15%;
+  margin:30px auto 0 auto;
+  display: block;
+}
+
+#bannerimg{
+  width:100%;
+  height:auto;
+  padding:0;
+  margin:0;
+  display:block;
+  opacity: 0.5;
+}
+
+.banner-content{
+  white-space:pre-line;
+  font-size:3em;
+  color:#FF7212;
+  position:absolute;
+  width:100%;
+  z-index:5;
+  text-align: center;
+  Font-Family: 'Arvo', Serif;
+  margin:0;
+  text-shadow: 1.5px 1.5px 1px #656565;
+
+}
+h2 {
+  margin:0;
+}
+
+/* 3.DIVIDERS */
+.divider{
+  width:100%;
+  height:auto;
+  flex: 1 0 0;
+}
+
+/* 4. MAIN */
+
+#main{
+  margin-top:30px;
+}
+
+ h3 {
+  font-size: 2em;
+  Font-Family: 'Arvo', Serif;
+}
+h2{
+  background-color:#8CA73C;
+  color:white;
+  text-align: center;
+  padding:15px;
+  font-size: 2.5em;
+  Font-Family: 'Arvo', Serif;
+}
+
+
+.divider{
+  flex:1 100%;
+  width:100%;
+}
+
+.button{
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* 5. LOCATION */
+
+#section1-text{
+  flex: 1 0 0;
+  color:#F26222;
+  text-align:right;
+  padding-right: 2em;
+  padding-top:2em;
+}
+
+#section1-text a{
+  color:#F26222;
+  text-decoration: none;
+}
+
+#section1-text a:hover{
+  color:color:#F26222;
+  text-decoration: underline;
+}
+
+
+#section1-img {
+  flex: 1 0 0;
+  width:100%;
+  height:auto;
+  position:relative;
+  text-align: center;
+}
+#img1{
+  display: block;
+  width:100%;
+}
+
+
+#locationbtn {
+  background-color:#F26222;
+  color:white;
+  padding:1em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+#locationbtn:hover{
+  background-color:white;
+  color:#F26222;
+
+}
+
+/* 6. MENU */
+
+
+#section2-img {
+  flex: 1 0 0;
+  width:100%;
+  height:auto;
+  position:relative;
+  text-align: center;
+  order:-1;
+
+}
+
+#section2-text {
+  flex: 1 0 0;
+  color:#8CA73C;
+  text-align:left;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+#section2-text a{
+  color:#8CA73C;
+  text-decoration: none;
+}
+
+#section2-text a:hover{
+  color:color:#F26222;
+  text-decoration: underline;
+}
+
+#img2{
+  display:block;
+}
+
+#menubtn {
+  background-color:#8CA73C;
+  color:white;
+  padding:1em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+
+#menubtn:hover{
+  background-color:white;
+  color:#8CA73C;
+
+}
+
+/* 7. SPECIALS */
+
+#section3-img {
+  flex: 1 0 0;
+  width:100%;
+  height:auto;
+  position:relative;
+  text-align: center;
+}
+
+#img3{
+  display:block;
+  width:100%;
+}
+
+#section3-text {
+  flex: 1 0 0;
+  color:#FBB02B;
+  text-align:left;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+#section3-text a{
+  color:#FBB02B;
+  text-decoration: none;
+}
+
+#section3-text a:hover{
+  color:#FBB02B;
+  text-decoration: underline;
+}
+
+#specialsbtn {
+  background-color:#FBB02B;
+  color:white;
+  padding:1em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+#specialsbtn:hover{
+  background-color:white;
+  color:#FBB02B;
+
+}
+
+@media screen and (max-width:780px){
+  .sticky{
+    display:none;
+  }
+  #banner{
+    display:none;
+  }
+  #section1-img{
+    display:none;
+  }
+#section1-text{
+  flex:100%;
+  text-align:center;
+  padding:0;
+}
+#section2-img{
+  display:none;
+}
+#section2-text{
+flex:100%;
+text-align:center;
+}
+
+#section3-img{
+  display:none;
+}
+#section3-text{
+flex:100%;
+text-align:center;
+}
+#main-menu{
+padding-bottom:5px;
+font-size: 12px;
+text-align: center;
+}
+
+#main-menu img{
+  width:15%;
+}
+
+}
+
+/* 8.FOOTER */
+
+#footer{
+  background-color:#8CA73C;
+}
+.footermenu{
+  display: inline-block;
+  list-style-type: none;
+}
+.footermenu li a{
+  text-decoration: none;
+  color:white;
+  font-size:0.75em;
+}
+
+.footermenu li a:hover{
+  color: #F3DE2A;
+  text-decoration: underline;
+
+}

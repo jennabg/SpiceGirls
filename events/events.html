@@ -1,0 +1,143 @@
+<!DOCTYPE html >
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Spice Girls | Events and Bookings</title>
+		<link rel="stylesheet" type="text/css" href="events.css">
+		<link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
+	</head>
+	<body>
+		<header id="header">
+ 				 <h1 class="hidden"> Spice Girls Restaurant Homepage </h1>
+ 			 <nav id="main-menu" class="display">
+ 				 <h2 class="hidden"> Main Menu </h2>
+ 				 <a href="../index.html"> <img src="images/spicegirlslogo-01.png" id="logo" alt="Spice Girls Logo"></a>
+ 					 <ul id="nav-list">
+ 						 <li><a href="../index.html"> Home </a></li>
+ 						 <li><a href="../about/about.html"> About </a></li>
+ 						 <li><a href="../menu/menu.html"> Menu </a></li>
+ 						 <li><a href="../location/locations.html"> Locations </a></li>
+ 						 <li><a href="../contest/contest.html"> Contest </a></li>
+ 					 </ul>
+ 				 </nav>
+ 	 </header>
+
+		<main id="main">
+			<div class="page-wrapper">
+				<h2 id="page-heading">Events Calendar</h2>
+				<p>I spice with my little eye, a Spice Girls event in the near future! Here you can
+				find information about events previously held here in our restaurant, or take a
+				look at some events going to be held here in the future.</p>
+				<label for="select-month">Select the month you want to view:</label>
+				<select id="select-month" name="select_month">
+				</select>
+				<h3 id="month-heading"></h3>
+				<div class="flex-area">
+					<div id="table-container">
+					<table id="calendar">
+						<thead>
+							<tr id="calendar-head">
+								<th>Sunday</th>
+								<th>Monday</th>
+								<th>Tuesday</th>
+								<th>Wednesday</th>
+								<th>Thursday</th>
+								<th>Friday</th>
+								<th>Saturday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="calendar-week-one"></tr>
+							<tr id="calendar-week-two"></tr>
+							<tr id="calendar-week-three"></tr>
+							<tr id="calendar-week-four"></tr>
+							<tr id="calendar-week-five"></tr>
+							<tr id="calendar-week-six"></tr>
+						</tbody>
+					</table>
+					</div>
+					<form action="#" method="post" id="booking-form" name="booking_form">
+						<fieldset>
+							<legend>Book your Event</legend>
+							<div class="form-row">
+								<label for="event-name">Event Name:</label>
+								<input type="text" id="event-name" name="event_name" />
+								<p id="event-name-error" class="error-message"></p>
+							</div>
+
+							<div class="form-row">
+								<label for="booker-name">Your Name:</label>
+								<input type="text" id="booker-name" name="booker_name" />
+								<p id="booker-name-error" class="error-message"></p>
+							</div>
+
+							<div class="form-row">
+								<label for="booker_phone">Your Phone:</label>
+								<input type="text" id="booker_phone" name="booker_phone" />
+								<p id="booker-phone-error" class="error-message"></p>
+							</div>
+
+							<div class="form-row">
+								<label for="booker_email">Your Email Address:</label>
+								<input type="text" id="booker_email" name="booker_email" />
+								<p id="booker-email-error" class="error-message"></p>
+							</div>
+
+							<div class="form-row">
+								<label for="start-day">Start Day:</label>
+								<input type="date" id="start-day" name="start_day" />
+							</div>
+
+							<div class="form-row">
+								<label for="start-time">Start Time:</label>
+								<input type="time" id="start-time" name="start_time" />
+							</div>
+
+							<div class="form-row">
+								<label for="end-day">End Day:</label>
+								<input type="date" id="end-day" name="end_day" />
+							</div>
+
+							<div class="form-row">
+								<label for="end-time">End Time:</label>
+								<input type="time" id="end-time" name="end_time" />
+							</div>
+							<p id="event-timing-error" class="error-message"></p>
+
+							<div class="form-row">
+								<label for="event-desc">Brief Description:</label>
+								<textarea id="event-desc"></textarea>
+							</div>
+							<input type="submit" value="Book your Event" name="book-event" />
+						</fieldset>
+						<div id="submit-confirmation"></div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<section id="event-details-section">
+			<a name="detail-section">
+			<div class="page-wrapper">
+				<div id="event-details">
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="page-wrapper">
+				<ul class="footermenu">
+					<li><a href="../contact/ContactUs.html">Contact Us</a></li>
+					<li><a href="../careers/careers.html">Careers</a></li>
+					<li><a href="../contest/contest.html">Contest Details</a></li>
+				</ul>
+				<ul class="footermenu">
+					<li><a href="../sitemap/sitemap.html">Site Map</a></li>
+					<li><a href="../giftcard/giftcard.html">Gift Cards</a></li>
+					<li><a href="events.html">Events and Bookings</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="events.js" ></script>
+</html>

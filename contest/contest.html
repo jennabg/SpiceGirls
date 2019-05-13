@@ -1,0 +1,103 @@
+<!DOCTYPE html >
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Spice Girls | Contest</title>
+		<link rel="stylesheet" type="text/css" href="contest.css">
+		<link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<header id="header">
+					<h1 class="hidden"> Spice Girls Restaurant Homepage </h1>
+				<nav id="main-menu" class="display">
+					<h2 class="hidden"> Main Menu </h2>
+					<a href="../index.html"> <img src="images/spicegirlslogo-01.png" id="logo" alt="Spice Girls Logo"></a>
+						<ul id="nav-list">
+							<li><a href="../index.html"> Home </a></li>
+							<li><a href="../about/about.html"> About </a></li>
+							<li><a href="../menu/menu.html"> Menu </a></li>
+							<li><a href="../location/locations.html"> Locations </a></li>
+							<li><a href="../contest/contest.html"> Contest </a></li>
+						</ul>
+					</nav>
+		</header>
+
+		<main id="main">
+			<div id="intro">
+				<div class="page-wrapper">
+					<h2 id="page-heading">Tic-Tac-Toe</h2>
+					<div class="row flex-container">
+						<img id="ai-symbol" src="images/tictactoe-04.png" alt="Symbol of the
+						Computer Player, Fork and Knife">
+						<p>Hi! If you can defeat me you will win a free meal.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="instructions">
+				<div id="instruction-content" class="page-wrapper flex-container">
+					<img id="player-symbol" src="images/tictactoe-03.png" alt="Symbol of Your
+					Player, Picture of a Flaming Pepper">
+					<div id="instruction-text">
+						<h3>You will be playing as the flaming pepper.</h3>
+						<p>Take turns placing your character in spaces on the grid. If three
+						consecutive spaces vertically, horizontally, or diagonally are occupied by
+						your character at the end of the game, you win!</p>
+					</div>
+					<div id="start-game" class="flex-container">
+						<p id="start-button" tabindex="0">Start Game</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="board-container">
+				<div id="game-board">
+					<div class="page-wrapper">
+						<table id="ttt-grid">
+							<tbody>
+								<tr>
+									<td id="0"><img></td>
+									<td id="1"><img></td>
+									<td id="2"><img></td>
+								</tr>
+								<tr>
+									<td id="3"><img></td>
+									<td id="4"><img></td>
+									<td id="5"><img></td>
+								</tr>
+								<tr>
+									<td id="6"><img></td>
+									<td id="7"><img></td>
+									<td id="8"><img></td>
+								</tr>
+							</tbody>
+						</table>
+						<div id="restart-button" class="flex-container">
+							<p id="button-area" tabindex="0">Try Again</p>
+						</div>
+						<div id="game-over">
+							<h3 id="game-over-message"></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer id="footer">
+			<div class="page-wrapper">
+				<ul class="footermenu">
+					<li><a href="../contact/ContactUs.html">Contact Us</a></li>
+					<li><a href="../careers/careers.html">Careers</a></li>
+					<li><a href="contest.html">Contest Details</a></li>
+				</ul>
+				<ul class="footermenu">
+					<li><a href="../sitemap/sitemap.html">Site Map</a></li>
+					<li><a href="../giftcard/giftcard.html">Gift Cards</a></li>
+					<li><a href="../events/events.html">Events and Bookings</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="contest.js" ></script>
+</html>

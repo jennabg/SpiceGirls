@@ -1,0 +1,312 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. DEFAULT OVERRIDES
+ * 2. GENERAL CLASSES
+ * 3. HEADER
+ * 4. GIFT CARD BANNER
+ * 5. GIFT CARD FORM
+ * 6. FOOTER
+ ***********************************************/
+
+/*1. DEFAULT OVERRIDES*/
+html{
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Lato', Sans-Serif;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+body, html{
+  height: 100%;
+  margin: 0;
+}
+
+h2:not(#giftCard_heading), h3{
+  color: #484848;
+}
+
+h3{
+  font-size: 20px;
+}
+
+legend, h2, h3, #submit{
+  text-transform: uppercase;
+}
+
+/*2. GENERAL CLASSES*/
+.page_wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hidden{
+  position: absolute;
+  left: -10000px;
+}
+
+legend, .green_btn{
+  font-weight: bold;
+}
+
+.green_btn{
+  padding: 5px;
+  margin: 10px;
+  background-color: #8ca73c;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.5s;
+}
+
+.green_btn:hover, .active{
+  color: #8ca73c;
+  background-color: white;
+  border: 2px solid #8ca73c;
+}
+
+/*3. HEADER*/
+#header{
+  background-color:#EAE7DA;
+}
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+/*4. GIFT CARD BANNER*/
+#giftCard_banner{
+  background-image: url("images/banner.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  padding: 100px;
+}
+
+#gcBanner_text{
+  color: white;
+  position: relative;
+  padding:0;
+  width: 45%;
+
+}
+
+#gcBanner_text p{
+  font-size: 20px;
+  margin:0;
+}
+
+#gcBanner_text p:last-child{
+  margin-top: 20px;
+}
+
+/*5. GIFT CARD FORM*/
+#giftCard{
+  justify-content: center;
+  padding-top: 65px;
+  padding-bottom: 55px; /*65 - 10px margin from submit's green_btn class*/
+}
+
+#giftCard_heading{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+#giftCard h2{
+  width: 100%;
+  text-align: center;
+    Font-Family: 'Arvo', Serif;
+}
+
+#giftCard_designs ul{
+  list-style: none;
+  padding: 0;
+}
+
+#giftCard_designs li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#giftCard_design_and_display{
+  margin-right: 30px;
+}
+
+#giftCard_display img{
+  max-width: 500px;
+}
+
+.gcDesign{
+  max-width: 150px;
+  transition: all 0.5s;
+}
+
+.gcDesign:hover{
+  filter: brightness(80%);
+}
+
+#giftcard_radio{
+  padding: 5px;
+  margin: 3px;
+  text-align: center;
+}
+
+#giftcard_form label:not(.green_btn){
+  display: block;
+}
+
+#giftcard_amount input{
+  position: absolute;
+  left: -10000px;
+}
+
+#giftcard_amount{
+  margin-bottom: 20px;
+}
+
+#toInfo, #fromInfo{
+  margin-bottom: 5px;
+}
+
+textarea, .errMsg{
+  margin-bottom: 20px;
+}
+
+fieldset{
+  color: green;
+  border: 1px solid green;
+}
+
+#submit-btn{
+  justify-content: flex-end;
+}
+
+.invalid{
+  background-color: #ff9999;
+}
+
+.errMsg{
+  color: red;
+  font-size: 0.875rem;
+}
+
+#thankyou_message{
+  width: 100%;
+  background-color: #8ca73c;
+  color: white;
+  text-align:center;
+  opacity: 75;
+  margin: 10px;
+}
+
+/*6. FOOTER*/
+#footer{
+  background-color:#8CA73C;
+  font-size: 20px;
+}
+
+.footermenu{
+  display: inline-block;
+  list-style-type: none;
+}
+
+.footermenu li a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.75em;
+}
+
+.footermenu li a:hover{
+  color: #F3DE2A;
+  text-decoration: underline;
+}

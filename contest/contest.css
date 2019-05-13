@@ -1,0 +1,314 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. Default Overrides
+ * 2. Use Anywhere Classes
+ * 3. Header Styling
+ * 4. Main Content Styling
+ * 5. Tic-Tac-Toe Board Styling
+ * 6. Button Styling
+ * 7. Footer Styling
+************************************************/
+
+/* 1. Default Overrides */
+
+html {
+	box-sizing: border-box;
+	font-size: 25px;
+	font-family: 'Lato', Sans-Serif;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+h2 {
+	position: absolute;
+	margin-top: 0;
+	padding-top: 1em;
+	text-align: center;
+	left: -600px;
+}
+
+h3 {
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+}
+
+table {
+	border-spacing: 0;
+}
+
+body {
+	margin: 0;
+}
+
+/* 2. Use Anywhere Classes */
+
+.hidden {
+	position: absolute;
+	left: -10000px;
+}
+
+.page-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* 3. Header Styling */
+
+#header{
+  background-color:#EAE7DA;
+}
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+
+/* 4. Main Content Styling */
+
+#page-heading{
+	text-transform: uppercase;
+	font-family: 'Arvo', Serif;
+}
+
+#instructions > div {
+	opacity: 0;
+}
+
+#instructions h3 {
+	margin-top: 0;
+}
+
+#intro, #instructions{
+	padding-bottom: 1em;
+}
+
+#instructions{
+	padding-top: 1em;
+}
+
+#player-symbol{
+	display: inline-block;
+}
+
+#instruction-text{
+	display: inline-block;
+	width: 70%;
+}
+
+#instruction-content{
+	justify-content: center;
+}
+
+.row {
+	overflow: hidden;
+	justify-content: center;
+	padding-top: 3em;
+	opacity: 0;
+}
+
+.row p {
+	padding-top: 1em;
+}
+
+.row img, #instructions img{
+	align-self: center;
+}
+
+/* 5. Tic-Tac-Toe Board Styling */
+
+#ai-symbol, #player-symbol{
+	width: 200px;
+	height: auto;
+}
+
+#game-board {
+	margin: 0 auto;
+	max-width: 500px;
+	padding: 1em 25px;
+	display: none;
+}
+
+#game-board > div {
+	position: relative;
+}
+
+tr td {
+	border: 2px solid #000;
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+	font-size: 1px;
+	text-align: center;
+}
+
+tr:first-child td {
+	border-top: none;
+}
+
+tr:last-child td {
+	border-bottom: none;
+}
+
+td:first-child {
+	border-left: none;
+}
+
+td:last-child {
+	border-right: none;
+}
+
+#game-over {
+	position: absolute;
+	top: 30%;
+	background: black;
+	width: 100%;
+	display: none;
+	text-align: center;
+	opacity: 0.75;
+}
+
+#game-over-message {
+	color: #fff;
+	opacity: ; 1
+}
+
+/* 6. Button Styling */
+
+#start-game, #restart-button{
+	width: 100%;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+#start-game p, #restart-button p{
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 5px;
+	background: #fbb02d;
+	cursor: pointer;
+	padding: 16px 15px 15px 15px;
+	transition: all 0.5s;
+	line-height: 0.75em;
+}
+
+#start-game p:hover, #restart-button p:hover{
+	background-color: #f26222;
+}
+
+#restart-button{
+	margin-top: 30px;
+}
+
+/* 7. Footer Styling */
+
+#footer{
+	background-color:#8CA73C;
+	font-size: 20px;
+}
+.footermenu{
+	display: inline-block;
+	list-style-type: none;
+}
+.footermenu li a{
+	text-decoration: none;
+	color:white;
+	font-size:0.75em;
+}
+
+.footermenu li a:hover{
+	color: #F3DE2A;
+	text-decoration: underline;
+}

@@ -1,0 +1,360 @@
+/************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. Default Overrides
+ * 2. Use Anywhere Classes
+ * 3. Header Styling
+ * 4. Restaurant Menu Styling
+ * 5. Restaurant Menu Animations
+ * 6. Restaurant Menu Text Styling
+ * 7. Footer Styling
+************************************************/
+
+/* 1. Default Overrides */
+
+html {
+	box-sizing: border-box;
+	font-size: 20px;
+	font-family: 'Lato', Sans-Serif;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+/* 2. Use Anywhere Classes */
+
+.hidden{
+	position:absolute;
+	left:-10000px;
+}
+
+.page-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+#main{
+	margin:10px;
+}
+
+/* 3. Header Styling */
+
+#header{
+  background-color:#EAE7DA;
+}
+#logo{
+display: inline-block;
+width:8%;
+height:auto;
+margin-top:5px;
+margin-left:1.5em;
+vertical-align: middle;
+
+}
+
+
+#main-menu{
+padding-bottom:5px;
+font-size: 20px;
+}
+
+
+#main-menu ul{
+position:absolute;
+right:10px;
+top:10px;
+display:inline-block;
+margin-left:3em;
+vertical-align: middle;
+}
+
+#nav-list ul, #nav-banner ul{
+display:inline-block;
+padding-top:25px;
+margin:0;
+vertical-align: middle;
+}
+
+#nav-list li, #nav-banner li{
+  display:inline;
+}
+
+#nav-list li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:#F26222;
+  margin-bottom:15px;
+}
+
+#nav-banner li a{
+  margin-right:1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color:white;
+}
+
+#nav-list a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+#nav-banner a:hover{
+
+  text-transform: uppercase;
+  border-bottom: 4px solid #FBB02B;
+  color:#FBB02B;
+  padding-bottom:0.5em;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color:#EAE7DA;
+  z-index: 100;
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
+-moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
+box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+
+}
+
+
+/* 4. Restaurant Menu Styling */
+
+#page-heading {
+	margin-top: 0;
+	padding-top: 1em;
+	font-family: 'Arvo', Serif;
+}
+
+#main > .page-wrapper:last-child {
+	position: relative;
+	height: 750px;
+	margin-bottom: 1em;
+}
+
+.flex-area {
+	height: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	clear: both;
+	position: relative;
+}
+
+[id^="menu"] {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+[class$="page"] {
+	flex: 1 50%;
+	background-size: 100%;
+	transform-origin: center left;
+	backface-visibility: hidden;
+}
+
+#menu-page-one-two > .right-page {
+	z-index: -1;
+}
+
+#menu-page-three-four > .right-page {
+	z-index: -2;
+}
+
+#menu-page-five-six > .right-page {
+	z-index: -3;
+}
+
+#menu-back > .right-page {
+	z-index: -4;
+	border: none;
+}
+
+.left-page {
+	transform: rotateY(-90deg);
+	transform-origin: center right;
+}
+
+[id^="menu"] > [class$="page"] {
+	background-image: url("images/menu-background.jpg");
+	padding: 0 25px;
+}
+
+#menu-back > .right-page {
+	background-image: none;
+}
+
+#flip-left, #flip-right {
+	/* Triangle Shape From CSS Shapes */
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 25px solid lightgreen;
+	border-bottom: 25px solid transparent;
+	position: absolute;
+	top: calc(50% - 25px);
+	cursor: pointer;
+}
+
+#flip-right {
+	/* Triangle Shape From CSS Shapes */
+	border-left: 25px solid lightgreen;
+	border-right: none;
+	left: calc(100% - 25px);
+	top: calc(50% - 25px);
+	cursor: pointer;
+}
+
+#flip-left.disabled {
+	border-right-color: grey !important;
+	opacity: 0.5;
+}
+#flip-right.disabled {
+	border-left-color: grey !important;
+	opacity: 0.5;
+}
+
+/* 5. Restaurant Menu Animations */
+
+.open-right-page {
+	animation: open-right-flip 1s 1 ease-in forwards;
+}
+
+.open-left-page {
+	animation: open-left-flip 1s 1 ease-out forwards;
+}
+
+.close-right-page {
+	animation: close-right-flip 1s 1 ease-out forwards;
+}
+
+.close-left-page {
+	animation: close-left-flip 1s 1 ease-in forwards;
+}
+
+@keyframes open-right-flip {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(90deg);
+	}
+}
+
+@keyframes open-left-flip {
+	0% {
+		transform: rotateY(-90deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes close-right-flip {
+	0% {
+		transform: rotateY(90deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+@keyframes close-left-flip {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(-90deg);
+	}
+}
+
+/* 6. Restaurant Menu Text Styling */
+
+.menu-text {
+	text-align: center;
+	background-color:rgba(255, 255, 255, 0.7);
+	border-radius: 10px;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+h2.menu-text {
+	font-size: 50px;
+	margin-bottom: 0.5em;
+}
+
+h3.menu-text {
+	font-size: 20px;
+	margin: 0;
+	text-align: left;
+}
+
+#menu-back h3.menu-text, #menu-front h3.menu-text {
+	margin-bottom: 1em;
+}
+
+.menu-image {
+	width: 75%;
+}
+
+p.menu-text {
+	font-size: 16px;
+	margin-top: 0;
+	display: block;
+	text-align: center;
+	padding: 0 1em;
+}
+
+.caption-area {
+	margin: 0 auto;
+	width: 75%;
+}
+
+p.menu-caption {
+	padding: 0 1em;
+}
+
+.price {
+	position:absolute;
+	right: 2em;
+	background: ;
+}
+
+/* 7. Footer Styling */
+
+#footer{
+	background-color: #8CA73C;
+	font-size: 20px;
+}
+
+.footermenu{
+	display: inline-block;
+	list-style-type: none;
+}
+
+.footermenu li a{
+	text-decoration: none;
+	color: white;
+	font-size: 0.75em;
+}
+
+.footermenu li a:hover{
+	color: #F3DE2A;
+	text-decoration: underline;
+}

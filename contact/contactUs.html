@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
+      <title>Contact Us</title>
+   </head>
+   <body>
+     <header id="header">
+           <h1 class="hidden"> Spice Girls Restaurant Homepage </h1>
+         <nav id="main-menu" class="display">
+           <h2 class="hidden"> Main Menu </h2>
+           <a href="../index.html"> <img src="img/spicegirlslogo-01.png" id="logo" alt="Spice Girls Logo"></a>
+             <ul id="nav-list">
+               <li><a href="../index.html"> Home </a></li>
+               <li><a href="../about/about.html"> About </a></li>
+               <li><a href="../menu/menu.html"> Menu </a></li>
+               <li><a href="../location/locations.html"> Locations </a></li>
+               <li><a href="../contest/contest.html"> Contest </a></li>
+             </ul>
+           </nav>
+     </header>
+      <div class="page-wrapper">
+         <main>
+            <div>
+               <img src="img/contactUs-bg4.jpg" alt="A picture of a hot soup with cayenne pepper" id="bg">
+            </div>
+            <div class="form" id="show">
+               <h2 id="getInTHeading">Get in touch</h2>
+               <p id="ask">Please complete the form below. We'd loved to hear from you!</p>
+               <form action="contactUs.html" method="post" name="contactUsForm">
+                  <div class="fullName">
+                     <label for="name">Full Name:</label>
+                     <input type="text" name="c_Name" id="name"
+                        placeholder="Full Name">
+                     <div id="errMsg"></div>
+                  </div>
+                  <div class="phoneNumber">
+                     <label for="phone">Phone Number:</label>
+                     <input type="text" name="c_Phone" id="phone"
+                        placeholder="Phone Number">
+                     <div id="errMsgP"></div>
+                  </div>
+                  <div class="emailAddress">
+                     <label for="email">Email:</label>
+                     <input type="text" name="c_Email" id="email"
+                        placeholder="Email">
+                     <div id="errMsgEm"></div>
+                  </div>
+                  <div class="commentarea">
+                     <label for="msg">Comments:</label>
+                     <textarea name="c_Message" id="msg"></textarea>
+                  </div>
+                  <div>
+                     <button type="submit" id="submit" name="submit">Submit</button>
+                  </div>
+               </form>
+               <div id="thanks_msg">
+                  <h2>Thank you <span id="thanksCustomer"></span> for your comment!</h2>
+               </div>
+            </div>
+         </main>
+      </div>
+
+      <footer>
+         <div class="page-wrapper">
+            <ul class="footermenu">
+               <li><a href="contactUs.html">Contact Us</a></li>
+               <li><a href="../careers/careers.html">Careers</a></li>
+               <li><a href="../contest/contest.html">Contest Details</a></li>
+            </ul>
+            <ul class="footermenu">
+               <li><a href="../Sitemap/sitemap.html">Site Map</a></li>
+               <li><a href="../giftcard/giftcard.html">Gift Cards</a></li>
+               <li><a href="../events/events.html">Events and Bookings</a></li>
+            </ul>
+         </div>
+      </footer>
+
+      <script type="text/javascript" src="js/contactUs.js"></script>
+   </body>
+</html>

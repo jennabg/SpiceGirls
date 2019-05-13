@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="gcStyle.css" />
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
+  <title>Spice Girls | Gift Card</title>
+</head>
+<body>
+  <header id="header">
+        <h1 class="hidden"> Spice Girls Restaurant Homepage </h1>
+      <nav id="main-menu" class="display">
+        <h2 class="hidden"> Main Menu </h2>
+        <a href="../index.html"> <img src="images/spicegirlslogo-01.png" id="logo" alt="Spice Girls Logo"></a>
+          <ul id="nav-list">
+            <li><a href="../index.html"> Home </a></li>
+            <li><a href="../about/about.html"> About </a></li>
+            <li><a href="../menu/menu.html"> Menu </a></li>
+            <li><a href="../location/locations.html"> Locations </a></li>
+            <li><a href="../contest/contest.html"> Contest </a></li>
+          </ul>
+        </nav>
+  </header>
+      <div id="giftCard_banner">
+        <div id="gcBanner_text">
+          <h2 id="giftCard_heading">The Gift of Spice</h2>
+          <p>
+            What would your friends and family tell you that they want, that
+            they really, really want? A gift card to our Spice Girls restaurant
+            of course!
+          </p>
+          <p>
+            Our gift card is a hot gift for all occasions and can be used at
+            any of our Spice Girls locations.
+          </p>
+        </div>
+      </div>
+      <main>
+        <div class="page_wrapper">
+            <section id="giftCard" class="flex-container">
+                <h2>Spice Girls Gift Card</h2>
+                <div id="giftCard_design_and_display">
+                  <div id="giftCard_display">
+                    <img id="main_display" src="GiftCards/giftcards-02.png" alt="Gift card design with a bowl of spicy curry and a Spice Girls label at the bottom" />
+                  </div>
+                  <div id="giftCard_designs">
+                    <h3>Pick a Design</h3>
+                    <ul>
+                      <li>
+                        <a><img class="gcDesign" src="GiftCards/giftcards-01.png" alt="Gift card design with a bowl of soup and a yellow Spice Girls label at the bottom" /></a>
+                      </li>
+                      <li>
+                        <a><img class="gcDesign" src="GiftCards/giftcards-02.png" alt="Gift card design with a bowl of spicy curry and a green Spice Girls label at the bottom" /></a>
+                      </li>
+                      <li>
+                        <a><img class="gcDesign" src=GiftCards/giftcards-03.png alt="Gift card design with a bowl of noodles and a orange Spice Girls label at the bottom" /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <form id="giftcard_form" action="#" method="post">
+                    <fieldset id="giftcard_amount">
+                      <legend>Gift Card Amount</legend>
+                      <div id="giftcard_radio">
+                         <label for="gcAmt_15" class="green_btn">$15</label>
+                         <input type="radio" id="gcAmt_15" name="gcAmount" value="15" />
+                         <label for="gcAmt_25" class="green_btn">$25</label>
+                         <input type="radio" id="gcAmt_25" name="gcAmount" value="25" />
+                         <label for="gcAmt_50" class="green_btn">$50</label>
+                         <input type="radio" id="gcAmt_50" name="gcAmount" value="50" />
+                      </div>
+                    </fieldset>
+
+                    <fieldset id="toInfo">
+                      <legend>
+                        To:
+                      </legend>
+                        <div>
+                           <label for="rName">Recipient Name</label>
+                           <input type="text" id="rName" class="name"
+                           name="recipientName" />
+                           <p id="rNameErrMsg" class="errMsg"></p>
+                        </div>
+                        <div>
+                           <label for="rEmail">Recipient Email</label>
+                           <input type="text" id="rEmail" class="email"
+                           name="recipientEmail" />
+                           <p id="rEmailErrMsg" class="errMsg"></p>
+                        </div>
+                        <div>
+                           <label for="gcMessage">Message (optional) </label>
+                           <textarea id="gcMessage" name="giftCardMessage"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="fromInfo">
+                      <legend>
+                        From:
+                      </legend>
+                      <div>
+                         <label for="cName">Your Name</label>
+                         <input type="text" id="cName" class="name"
+                         name="customerName" />
+                         <p id="cNameErrMsg" class="errMsg"></p>
+                      </div>
+                      <div>
+                         <label for="cEmail"> Your Email</label>
+                         <input type="text" id="cEmail" class="email"
+                          name="customerEmail" />
+                         <p id="cEmailErrMsg" class="errMsg"></p>
+                      </div>
+                    </fieldset>
+
+                     <div id="submit-btn" class="flex-container">
+                        <button type="submit" id="submit" class="green_btn">
+                          Purchase</button>
+                     </div>
+                </form>
+              <div id="thankyou_message"></div>
+            </section>
+          </div> <!--end of page wrapper-->
+      </main>
+      <footer id="footer">
+        <div class="page_wrapper">
+          <ul class="footermenu">
+            <li><a href="../contact/contactUs.html">Contact Us</a></li>
+            <li><a href="../careers/careers.html">Careers</a></li>
+            <li><a href="../contest/contest.html">Contest Details</a></li>
+          </ul>
+          <ul class="footermenu">
+            <li><a href="../sitemap/sitemap.html">Site Map</a></li>
+            <li><a href="../giftcard/giftcard.html">Gift Cards</a></li>
+            <li><a href="../events/events.html">Events and Bookings</a></li>
+          </ul>
+        </div>
+      </footer>
+    <script src="gcScript.js"></script>
+  </body>
+</html>
